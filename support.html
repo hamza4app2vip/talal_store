@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدعم الفني | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .support-page {
+            padding: var(--space-8) 0;
+        }
+
+        .support-card {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            transition: all var(--transition-fast);
+        }
+
+        .support-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .support-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-4);
+            background: var(--color-primary-light);
+            border-radius: var(--radius-full);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <button class="menu-toggle"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <a href="index.html" class="header-logo"><svg class="header-logo-img" width="32" height="32"
+                    viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg></a>
+            <span class="header-center">الدعم</span>
+            <div style="width:40px;"></div>
+        </div>
+    </header>
+
+    <div class="nav-drawer-overlay"></div>
+    <nav class="nav-drawer">
+        <div class="nav-drawer-header">
+            <div class="nav-drawer-logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                </svg><span>موبايل ستور</span></div><button class="nav-drawer-close"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg></button>
+        </div>
+        <div class="nav-drawer-content">
+            <ul class="nav-drawer-links">
+                <li><a href="index.html" class="nav-drawer-link">الرئيسية</a></li>
+                <li><a href="shop.html" class="nav-drawer-link">تسوّق</a></li>
+                <li><a href="contact.html" class="nav-drawer-link">تواصل معنا</a></li>
+                <li><a href="support.html" class="nav-drawer-link active">الدعم</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container support-page">
+            <div style="text-align:center;margin-bottom:var(--space-8);">
+                <h1 style="font-size:var(--text-3xl);font-weight:var(--font-bold);margin-bottom:var(--space-3);">كيف
+                    يمكننا مساعدتك؟</h1>
+                <p style="color:var(--color-text-secondary);">اختر نوع المساعدة التي تحتاجها</p>
+            </div>
+
+            <div
+                style="display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:var(--space-4);margin-bottom:var(--space-8);">
+                <a href="faq.html" class="support-card">
+                    <div class="support-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3" />
+                            <circle cx="12" cy="17" r=".5" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">الأسئلة الشائعة</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">إجابات على أكثر الأسئلة
+                        شيوعاً</p>
+                </a>
+                <a href="contact.html" class="support-card">
+                    <div class="support-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">تواصل معنا</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">أرسل لنا رسالة وسنرد قريباً
+                    </p>
+                </a>
+                <a href="https://wa.me/966501234567" class="support-card">
+                    <div class="support-icon" style="background:#25D366;color:white;"><svg width="32" height="32"
+                            viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">واتساب</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">دردش معنا مباشرة</p>
+                </a>
+                <a href="tel:920012345" class="support-card">
+                    <div class="support-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">اتصل بنا</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">920012345</p>
+                </a>
+                <a href="repairs.html" class="support-card">
+                    <div class="support-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">الصيانة</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">احجز موعد صيانة</p>
+                </a>
+                <a href="warranty.html" class="support-card">
+                    <div class="support-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg></div>
+                    <h3 style="font-weight:var(--font-semibold);margin-bottom:var(--space-2);">الضمان</h3>
+                    <p style="font-size:var(--text-sm);color:var(--color-text-secondary);">معلومات الضمان والحماية</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

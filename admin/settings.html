@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الإعدادات | لوحة التحكم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <header class="admin-header">
+            <button class="menu-toggle" id="sidebar-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <span style="font-weight:var(--font-semibold);">الإعدادات</span>
+            <div style="width:40px;"></div>
+        </header>
+
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-logo">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                        <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                            fill="none" />
+                        <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                    </svg>
+                    <span>موبايل ستور</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-group">
+                    <ul class="sidebar-nav-list">
+                        <li><a href="dashboard.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>لوحة التحكم</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-nav-group">
+                    <p class="sidebar-nav-title">إدارة المتجر</p>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="products.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                </svg>المنتجات</a></li>
+                        <li><a href="orders.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 6h15l-1.5 9h-12z" />
+                                </svg>الطلبات</a></li>
+                        <li><a href="customers.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>العملاء</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-nav-group">
+                    <p class="sidebar-nav-title">المحتوى</p>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="settings.html" class="sidebar-nav-link active"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3" />
+                                    <path
+                                        d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z" />
+                                </svg>الإعدادات</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">م</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">محمد أحمد</div>
+                        <div class="sidebar-user-role">مدير النظام</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">إعدادات المتجر</h1>
+                    <p class="page-subtitle">إدارة إعدادات وتكوينات الموقع</p>
+                </div>
+            </div>
+
+            <!-- Store Info -->
+            <div class="admin-card" style="margin-bottom:var(--space-6);">
+                <div class="admin-card-header">
+                    <h2 class="admin-card-title">معلومات المتجر</h2>
+                </div>
+                <div class="admin-card-body">
+                    <form class="admin-form">
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">اسم المتجر</label>
+                                <input type="text" class="form-input" value="موبايل ستور">
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">البريد الإلكتروني</label>
+                                <input type="email" class="form-input" value="support@mobilestore.sa">
+                            </div>
+                        </div>
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">رقم الهاتف</label>
+                                <input type="tel" class="form-input" value="920012345">
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">رقم الواتساب</label>
+                                <input type="tel" class="form-input" value="+966501234567">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:var(--space-4);">
+                            <label class="form-label">العنوان</label>
+                            <textarea class="form-textarea"
+                                rows="2">طريق الملك فهد، الرياض، المملكة العربية السعودية</textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Currency & Tax -->
+            <div class="admin-card" style="margin-bottom:var(--space-6);">
+                <div class="admin-card-header">
+                    <h2 class="admin-card-title">العملة والضرائب</h2>
+                </div>
+                <div class="admin-card-body">
+                    <form class="admin-form">
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">العملة الافتراضية</label>
+                                <select class="form-select">
+                                    <option value="SAR" selected>ريال سعودي (ر.س)</option>
+                                    <option value="AED">درهم إماراتي</option>
+                                    <option value="KWD">دينار كويتي</option>
+                                    <option value="USD">دولار أمريكي</option>
+                                </select>
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">نسبة الضريبة (%)</label>
+                                <input type="number" class="form-input" value="15" min="0" max="100">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:var(--space-4);">
+                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                <input type="checkbox" checked style="width:18px;height:18px;">
+                                <span>عرض الأسعار شاملة الضريبة</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Shipping -->
+            <div class="admin-card" style="margin-bottom:var(--space-6);">
+                <div class="admin-card-header">
+                    <h2 class="admin-card-title">الشحن والتوصيل</h2>
+                </div>
+                <div class="admin-card-body">
+                    <form class="admin-form">
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">تكلفة الشحن الافتراضية</label>
+                                <input type="number" class="form-input" value="30">
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">الحد الأدنى للشحن المجاني</label>
+                                <input type="number" class="form-input" value="500">
+                            </div>
+                        </div>
+                        <div class="form-group" style="margin-bottom:var(--space-4);">
+                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                                <input type="checkbox" checked style="width:18px;height:18px;">
+                                <span>تفعيل الشحن المجاني عند الوصول للحد الأدنى</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Payment Methods -->
+            <div class="admin-card" style="margin-bottom:var(--space-6);">
+                <div class="admin-card-header">
+                    <h2 class="admin-card-title">طرق الدفع</h2>
+                </div>
+                <div class="admin-card-body">
+                    <div style="display:flex;flex-direction:column;gap:var(--space-3);">
+                        <label
+                            style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);cursor:pointer;">
+                            <input type="checkbox" checked style="width:18px;height:18px;">
+                            <div style="flex:1;"><strong>بطاقة ائتمان/مدى</strong>
+                                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;">Visa,
+                                    Mastercard, Mada</p>
+                            </div>
+                            <span class="status-badge active">مفعّل</span>
+                        </label>
+                        <label
+                            style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);cursor:pointer;">
+                            <input type="checkbox" checked style="width:18px;height:18px;">
+                            <div style="flex:1;"><strong>تحويل بنكي</strong>
+                                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;">التحويل
+                                    لحسابنا البنكي</p>
+                            </div>
+                            <span class="status-badge active">مفعّل</span>
+                        </label>
+                        <label
+                            style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);cursor:pointer;">
+                            <input type="checkbox" checked style="width:18px;height:18px;">
+                            <div style="flex:1;"><strong>الدفع عند الاستلام</strong>
+                                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;">الدفع
+                                    نقداً عند التوصيل</p>
+                            </div>
+                            <span class="status-badge active">مفعّل</span>
+                        </label>
+                        <label
+                            style="display:flex;align-items:center;gap:var(--space-3);padding:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);cursor:pointer;">
+                            <input type="checkbox" style="width:18px;height:18px;">
+                            <div style="flex:1;"><strong>Apple Pay</strong>
+                                <p style="font-size:var(--text-sm);color:var(--color-text-secondary);margin:0;">الدفع
+                                    عبر Apple Pay</p>
+                            </div>
+                            <span class="status-badge inactive">معطّل</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Social Media -->
+            <div class="admin-card">
+                <div class="admin-card-header">
+                    <h2 class="admin-card-title">وسائل التواصل الاجتماعي</h2>
+                </div>
+                <div class="admin-card-body">
+                    <form class="admin-form">
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">Instagram</label>
+                                <input type="url" class="form-input" placeholder="https://instagram.com/...">
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">Twitter/X</label>
+                                <input type="url" class="form-input" placeholder="https://x.com/...">
+                            </div>
+                        </div>
+                        <div class="form-row cols-2" style="margin-bottom:var(--space-4);">
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">TikTok</label>
+                                <input type="url" class="form-input" placeholder="https://tiktok.com/...">
+                            </div>
+                            <div class="form-group" style="margin:0;">
+                                <label class="form-label">YouTube</label>
+                                <input type="url" class="form-input" placeholder="https://youtube.com/...">
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">حفظ التغييرات</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('sidebar-toggle')?.addEventListener('click', () => {
+            document.getElementById('admin-sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

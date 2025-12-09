@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تسوق من أفضل ماركات الهواتف الذكية العالمية">
+    <title>الماركات | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <button class="menu-toggle" aria-label="القائمة">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg>
+            </button>
+            <a href="index.html" class="header-logo">
+                <svg class="header-logo-img" width="32" height="32" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg>
+                <span class="header-logo-text">موبايل ستور</span>
+            </a>
+            <span class="header-center">الماركات</span>
+            <div class="header-actions">
+                <button class="header-action-btn header-search-btn" aria-label="بحث">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="M21 21l-4.35-4.35" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="header-action-btn header-cart-btn" aria-label="السلة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                        <circle cx="9" cy="20" r="1" />
+                        <circle cx="18" cy="20" r="1" />
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Nav Drawer -->
+    <div class="nav-drawer-overlay"></div>
+    <nav class="nav-drawer">
+        <div class="nav-drawer-header">
+            <div class="nav-drawer-logo">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg>
+                <span>موبايل ستور</span>
+            </div>
+            <button class="nav-drawer-close" aria-label="إغلاق">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        <div class="nav-drawer-content">
+            <ul class="nav-drawer-links">
+                <li><a href="index.html" class="nav-drawer-link">الرئيسية</a></li>
+                <li><a href="shop.html" class="nav-drawer-link">تسوّق</a></li>
+                <li><a href="brands.html" class="nav-drawer-link active">الماركات</a></li>
+                <li><a href="repairs.html" class="nav-drawer-link">الصيانة</a></li>
+                <li><a href="contact.html" class="nav-drawer-link">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container brands-page">
+            <div class="section-header">
+                <h1 class="section-title">جميع الماركات</h1>
+            </div>
+
+            <div class="brands-grid">
+                <a href="shop.html?brand=apple" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <path
+                                d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Apple</h3>
+                    <p class="brand-page-count">15 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=samsung" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <ellipse cx="12" cy="12" rx="10" ry="5" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Samsung</h3>
+                    <p class="brand-page-count">22 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=xiaomi" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <rect x="8" y="8" width="8" height="8" fill="white" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Xiaomi</h3>
+                    <p class="brand-page-count">18 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=huawei" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Huawei</h3>
+                    <p class="brand-page-count">12 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=oppo" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="6" fill="white" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">OPPO</h3>
+                    <p class="brand-page-count">14 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=vivo" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <path d="M2 12l10 10 10-10L12 2 2 12z" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Vivo</h3>
+                    <p class="brand-page-count">10 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=realme" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <rect x="4" y="4" width="16" height="16" />
+                            <rect x="7" y="7" width="10" height="10" fill="white" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">Realme</h3>
+                    <p class="brand-page-count">11 منتج</p>
+                </a>
+
+                <a href="shop.html?brand=oneplus" class="brand-page-card">
+                    <div class="brand-page-logo">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="60" height="60">
+                            <path d="M12 4v16M4 12h16" stroke-width="3" />
+                        </svg>
+                    </div>
+                    <h3 class="brand-page-name">OnePlus</h3>
+                    <p class="brand-page-count">8 منتج</p>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

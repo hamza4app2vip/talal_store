@@ -1,0 +1,345 @@
+/* =============================================
+   BASE STYLES - Arabic Smartphone Store
+   ============================================= */
+
+/* ─────────────────────────────────────────────
+   GOOGLE FONTS IMPORT
+   ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap');
+
+/* ─────────────────────────────────────────────
+   CSS RESET
+   ───────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-arabic);
+    font-size: var(--text-base);
+    font-weight: var(--font-regular);
+    line-height: var(--leading-normal);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-primary);
+    direction: rtl;
+    text-align: right;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* English mode override */
+body.lang-en {
+    font-family: var(--font-english);
+    direction: ltr;
+    text-align: left;
+}
+
+/* ─────────────────────────────────────────────
+   TYPOGRAPHY BASE
+   ───────────────────────────────────────────── */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: var(--font-bold);
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-4);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
+
+h5 {
+    font-size: var(--text-lg);
+}
+
+h6 {
+    font-size: var(--text-base);
+}
+
+p {
+    margin-bottom: var(--space-4);
+    color: var(--color-text-secondary);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+a:hover {
+    color: var(--color-primary-hover);
+}
+
+strong,
+b {
+    font-weight: var(--font-semibold);
+}
+
+small {
+    font-size: var(--text-sm);
+}
+
+/* ─────────────────────────────────────────────
+   LISTS
+   ───────────────────────────────────────────── */
+ul,
+ol {
+    list-style: none;
+}
+
+/* ─────────────────────────────────────────────
+   IMAGES & MEDIA
+   ───────────────────────────────────────────── */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    border-style: none;
+}
+
+/* ─────────────────────────────────────────────
+   FORMS
+   ───────────────────────────────────────────── */
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+button,
+input {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+    resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+}
+
+/* ─────────────────────────────────────────────
+   TABLE
+   ───────────────────────────────────────────── */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* ─────────────────────────────────────────────
+   MISC
+   ───────────────────────────────────────────── */
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    border: 0;
+    border-top: 1px solid var(--color-border-light);
+    margin: var(--space-6) 0;
+}
+
+/* Remove default button styles */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Selection */
+::selection {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Focus outline */
+:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* ─────────────────────────────────────────────
+   SCROLLBAR STYLING
+   ───────────────────────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-border-medium);
+    border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-tertiary);
+}
+
+/* ─────────────────────────────────────────────
+   UTILITY CLASSES
+   ───────────────────────────────────────────── */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* Text utilities */
+.text-primary {
+    color: var(--color-primary) !important;
+}
+
+.text-secondary {
+    color: var(--color-text-secondary) !important;
+}
+
+.text-muted {
+    color: var(--color-text-muted) !important;
+}
+
+.text-success {
+    color: var(--color-success) !important;
+}
+
+.text-error {
+    color: var(--color-error) !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+.text-start {
+    text-align: right !important;
+}
+
+.text-end {
+    text-align: left !important;
+}
+
+body.lang-en .text-start {
+    text-align: left !important;
+}
+
+body.lang-en .text-end {
+    text-align: right !important;
+}
+
+/* Font weight utilities */
+.font-light {
+    font-weight: var(--font-light) !important;
+}
+
+.font-regular {
+    font-weight: var(--font-regular) !important;
+}
+
+.font-medium {
+    font-weight: var(--font-medium) !important;
+}
+
+.font-semibold {
+    font-weight: var(--font-semibold) !important;
+}
+
+.font-bold {
+    font-weight: var(--font-bold) !important;
+}
+
+/* English text styling */
+.text-en {
+    font-family: var(--font-english);
+    direction: ltr;
+    display: inline-block;
+}
