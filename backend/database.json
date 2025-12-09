@@ -1,0 +1,129 @@
+{
+  "brands": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "name_en": "Apple",
+      "logo": "🍎",
+      "active": 1
+    },
+    {
+      "id": 2,
+      "name": "Samsung",
+      "name_en": "Samsung",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 3,
+      "name": "Xiaomi",
+      "name_en": "Xiaomi",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 4,
+      "name": "Huawei",
+      "name_en": "Huawei",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 5,
+      "name": "OPPO",
+      "name_en": "OPPO",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 6,
+      "name": "Vivo",
+      "name_en": "Vivo",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 7,
+      "name": "Realme",
+      "name_en": "Realme",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 8,
+      "name": "OnePlus",
+      "name_en": "OnePlus",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 9,
+      "name": "Honor",
+      "name_en": "Honor",
+      "logo": "📱",
+      "active": 1
+    },
+    {
+      "id": 10,
+      "name": "Google",
+      "name_en": "Google",
+      "logo": "📱",
+      "active": 1
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "آيفون 15 برو ماكس",
+      "brand_id": 1,
+      "price": 5499,
+      "old_price": 5999,
+      "image": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_EMEA?wid=400",
+      "storage": "256GB",
+      "ram": "8GB",
+      "color": "أسود تيتانيوم",
+      "description": "آيفون 15 برو ماكس مع شريحة A17 Pro",
+      "in_stock": 1,
+      "featured": 1,
+      "created_at": "2025-12-09T23:15:22.215Z"
+    },
+    {
+      "id": 2,
+      "name": "سامسونج جالاكسي S24 ألترا",
+      "brand_id": 2,
+      "price": 4999,
+      "old_price": 5299,
+      "image": "https://images.samsung.com/is/image/samsung/p6pim/ae/2401/gallery/ae-galaxy-s24-s928-sm-s928bztqmea-thumb-539573347?wid=400",
+      "storage": "256GB",
+      "ram": "12GB",
+      "color": "رمادي تيتانيوم",
+      "description": "سامسونج جالاكسي S24 ألترا مع Galaxy AI",
+      "in_stock": 1,
+      "featured": 1,
+      "created_at": "2025-12-09T23:15:22.216Z"
+    },
+    {
+      "id": 3,
+      "name": "شاومي 14 ألترا",
+      "brand_id": 3,
+      "price": 3999,
+      "old_price": null,
+      "image": "https://i01.appmifile.com/v1/MI_18455B3E4DA706226CF7535A58E875F0267/pms_1708420528.05498498.png?width=400",
+      "storage": "512GB",
+      "ram": "16GB",
+      "color": "أسود",
+      "description": "شاومي 14 ألترا مع كاميرا Leica",
+      "in_stock": 1,
+      "featured": 1,
+      "created_at": "2025-12-09T23:15:22.216Z"
+    }
+  ],
+  "admins": [
+    {
+      "id": 1,
+      "email": "admin@mobilestore.sa",
+      "password": "admin123",
+      "name": "محمد أحمد"
+    }
+  ]
+}
