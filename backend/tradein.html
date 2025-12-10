@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استبدال الأجهزة | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/sections2.css">
+    <style>
+        .tradein-page {
+            padding: var(--space-8) 0;
+        }
+
+        .tradein-form-card {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            box-shadow: var(--shadow-card);
+            max-width: 600px;
+            margin: var(--space-8) auto 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <button class="menu-toggle" aria-label="القائمة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <a href="index.html" class="header-logo">
+                <svg class="header-logo-img" width="32" height="32" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg>
+                <span class="header-logo-text">موبايل ستور</span>
+            </a>
+            <span class="header-center">الاستبدال</span>
+            <div class="header-actions">
+                <a href="cart.html" class="header-action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                        <circle cx="9" cy="20" r="1" />
+                        <circle cx="18" cy="20" r="1" />
+                    </svg></a>
+            </div>
+        </div>
+    </header>
+
+    <div class="nav-drawer-overlay"></div>
+    <nav class="nav-drawer">
+        <div class="nav-drawer-header">
+            <div class="nav-drawer-logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg><span>موبايل ستور</span></div>
+            <button class="nav-drawer-close" aria-label="إغلاق"><svg viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg></button>
+        </div>
+        <div class="nav-drawer-content">
+            <ul class="nav-drawer-links">
+                <li><a href="index.html" class="nav-drawer-link">الرئيسية</a></li>
+                <li><a href="shop.html" class="nav-drawer-link">تسوّق</a></li>
+                <li><a href="brands.html" class="nav-drawer-link">الماركات</a></li>
+                <li><a href="repairs.html" class="nav-drawer-link">الصيانة</a></li>
+                <li><a href="tradein.html" class="nav-drawer-link active">الاستبدال</a></li>
+                <li><a href="contact.html" class="nav-drawer-link">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container tradein-page">
+            <div style="text-align:center;margin-bottom:var(--space-8);">
+                <div
+                    style="width:100px;height:100px;margin:0 auto var(--space-4);background:var(--color-primary-light);border-radius:var(--radius-full);display:flex;align-items:center;justify-content:center;">
+                    <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)"
+                        stroke-width="2">
+                        <path d="M17 1l4 4-4 4" />
+                        <path d="M3 11V9a4 4 0 014-4h14" />
+                        <path d="M7 23l-4-4 4-4" />
+                        <path d="M21 13v2a4 4 0 01-4 4H3" />
+                    </svg>
+                </div>
+                <h1 style="font-size:var(--text-3xl);font-weight:var(--font-bold);margin-bottom:var(--space-3);">استبدل
+                    جهازك القديم</h1>
+                <p style="color:var(--color-text-secondary);max-width:500px;margin:0 auto;">احصل على أفضل قيمة لجهازك
+                    الحالي واستفد من خصم على جهازك الجديد</p>
+            </div>
+
+            <!-- Steps -->
+            <div class="tradein-steps" style="margin-bottom:var(--space-8);">
+                <div class="tradein-step">
+                    <div class="tradein-step-number">1</div>
+                    <h4 class="tradein-step-title">تقييم الجهاز</h4>
+                    <p class="tradein-step-desc">أدخل بيانات جهازك</p>
+                </div>
+                <div class="tradein-step">
+                    <div class="tradein-step-number">2</div>
+                    <h4 class="tradein-step-title">عرض السعر</h4>
+                    <p class="tradein-step-desc">احصل على عرض فوري</p>
+                </div>
+                <div class="tradein-step">
+                    <div class="tradein-step-number">3</div>
+                    <h4 class="tradein-step-title">تسليم الجهاز</h4>
+                    <p class="tradein-step-desc">سلّم في أي فرع</p>
+                </div>
+                <div class="tradein-step">
+                    <div class="tradein-step-number">4</div>
+                    <h4 class="tradein-step-title">خصم فوري</h4>
+                    <p class="tradein-step-desc">استفد من الخصم</p>
+                </div>
+            </div>
+
+            <!-- Trade-in Form -->
+            <div class="tradein-form-card">
+                <h2
+                    style="font-size:var(--text-xl);font-weight:var(--font-bold);margin-bottom:var(--space-6);text-align:center;">
+                    احصل على تقييم جهازك</h2>
+                <form>
+                    <div class="form-group">
+                        <label class="form-label">نوع الجهاز</label>
+                        <select class="form-select" required>
+                            <option value="">اختر الماركة</option>
+                            <option>Apple iPhone</option>
+                            <option>Samsung Galaxy</option>
+                            <option>Xiaomi</option>
+                            <option>Huawei</option>
+                            <option>أخرى</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">الموديل</label>
+                        <input type="text" class="form-input" placeholder="مثال: iPhone 13 Pro Max" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">السعة التخزينية</label>
+                        <select class="form-select" required>
+                            <option value="">اختر السعة</option>
+                            <option>64GB</option>
+                            <option>128GB</option>
+                            <option>256GB</option>
+                            <option>512GB</option>
+                            <option>1TB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">حالة الجهاز</label>
+                        <select class="form-select" required>
+                            <option value="">اختر الحالة</option>
+                            <option>ممتاز - كالجديد</option>
+                            <option>جيد جداً - خدوش بسيطة</option>
+                            <option>جيد - علامات استخدام</option>
+                            <option>مقبول - تلف واضح</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">هل الشاشة سليمة؟</label>
+                        <div style="display:flex;gap:var(--space-4);">
+                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;"><input
+                                    type="radio" name="screen" value="yes" checked> نعم</label>
+                            <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;"><input
+                                    type="radio" name="screen" value="no"> لا</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">رقم الجوال للتواصل</label>
+                        <input type="tel" class="form-input" placeholder="05xxxxxxxx" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg"
+                        style="margin-top:var(--space-4);">احصل على التقييم</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

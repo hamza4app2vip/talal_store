@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المدونة | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <button class="menu-toggle" aria-label="القائمة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <a href="index.html" class="header-logo"><svg class="header-logo-img" width="32" height="32"
+                    viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                    <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                </svg><span class="header-logo-text">موبايل ستور</span></a>
+            <span class="header-center">المدونة</span>
+            <div class="header-actions"><a href="cart.html" class="header-action-btn"><svg viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                    </svg></a></div>
+        </div>
+    </header>
+
+    <div class="nav-drawer-overlay"></div>
+    <nav class="nav-drawer">
+        <div class="nav-drawer-header">
+            <div class="nav-drawer-logo"><svg width="28" height="28" viewBox="0 0 32 32" fill="var(--color-primary)">
+                    <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                        fill="none" />
+                </svg><span>موبايل ستور</span></div><button class="nav-drawer-close"><svg viewBox="0 0 24 24"
+                    fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12" />
+                </svg></button>
+        </div>
+        <div class="nav-drawer-content">
+            <ul class="nav-drawer-links">
+                <li><a href="index.html" class="nav-drawer-link">الرئيسية</a></li>
+                <li><a href="shop.html" class="nav-drawer-link">تسوّق</a></li>
+                <li><a href="blog.html" class="nav-drawer-link active">المدونة</a></li>
+                <li><a href="contact.html" class="nav-drawer-link">تواصل معنا</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="container" style="padding:var(--space-6) 0;">
+            <div class="section-header">
+                <h1 class="section-title">مقالات ونصائح</h1>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:var(--space-6);">
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">تصوير</span>
+                        <h3 class="article-card-title">أفضل 5 هواتف للتصوير في 2024</h3>
+                        <p class="article-card-excerpt">تعرف على أفضل الهواتف الذكية للتصوير الاحترافي هذا العام</p>
+                        <span style="font-size:var(--text-xs);color:var(--color-text-muted);">20 يناير 2024</span>
+                    </div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1585338107529-13afc5f02586?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">نصائح</span>
+                        <h3 class="article-card-title">نصائح للحفاظ على بطارية هاتفك</h3>
+                        <p class="article-card-excerpt">10 نصائح بسيطة لإطالة عمر بطارية هاتفك الذكي</p><span
+                            style="font-size:var(--text-xs);color:var(--color-text-muted);">18 يناير 2024</span>
+                    </div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">دليل
+                            شراء</span>
+                        <h3 class="article-card-title">كيف تختار هاتفك التالي؟</h3>
+                        <p class="article-card-excerpt">دليل شامل لاختيار الهاتف المناسب لاحتياجاتك وميزانيتك</p><span
+                            style="font-size:var(--text-xs);color:var(--color-text-muted);">15 يناير 2024</span>
+                    </div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1592899677977-9c10ca588bbd?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">مقارنة</span>
+                        <h3 class="article-card-title">iPhone 15 vs Galaxy S24: أيهما أفضل؟</h3>
+                        <p class="article-card-excerpt">مقارنة شاملة بين أحدث الهواتف الرائدة من Apple وSamsung</p><span
+                            style="font-size:var(--text-xs);color:var(--color-text-muted);">10 يناير 2024</span>
+                    </div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">أمان</span>
+                        <h3 class="article-card-title">حماية هاتفك من الاختراق</h3>
+                        <p class="article-card-excerpt">خطوات بسيطة لتأمين هاتفك وبياناتك الشخصية</p><span
+                            style="font-size:var(--text-xs);color:var(--color-text-muted);">5 يناير 2024</span>
+                    </div>
+                </a>
+                <a href="#" class="article-card">
+                    <div class="article-card-image"><img
+                            src="https://images.unsplash.com/photo-1601784551446-20c9e07cdbdb?w=400" alt=""></div>
+                    <div class="article-card-body"><span
+                            style="font-size:var(--text-xs);color:var(--color-primary);margin-bottom:var(--space-2);display:block;">إكسسوارات</span>
+                        <h3 class="article-card-title">أفضل إكسسوارات الهواتف في 2024</h3>
+                        <p class="article-card-excerpt">اكتشف أهم الإكسسوارات التي تحتاجها لهاتفك</p><span
+                            style="font-size:var(--text-xs);color:var(--color-text-muted);">1 يناير 2024</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,303 @@
+/* =============================================
+   FOOTER - Arabic Smartphone Store
+   ============================================= */
+
+.footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-inverse);
+    padding-top: var(--space-12);
+}
+
+.footer a {
+    color: var(--color-text-inverse);
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.footer a:hover {
+    opacity: 1;
+    color: var(--color-primary);
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER TOP SECTION
+   ───────────────────────────────────────────── */
+.footer-top {
+    display: grid;
+    gap: var(--space-8);
+    padding-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 768px) {
+    .footer-top {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer-top {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* Footer Logo & About */
+.footer-brand {
+    max-width: 300px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.footer-logo img {
+    height: 40px;
+}
+
+.footer-logo span {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    color: var(--color-white);
+}
+
+.footer-about {
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-4);
+}
+
+/* Footer Sections */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    margin-bottom: var(--space-4);
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-sm);
+}
+
+.footer-link svg {
+    width: 16px;
+    height: 16px;
+    opacity: 0.6;
+}
+
+/* Footer Contact Info */
+.footer-contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-contact-item svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    margin-top: 2px;
+    color: var(--color-primary);
+}
+
+/* ─────────────────────────────────────────────
+   SOCIAL LINKS
+   ───────────────────────────────────────────── */
+.footer-social {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    transition: all var(--transition-fast);
+}
+
+.footer-social-link:hover {
+    background-color: var(--color-primary);
+    opacity: 1;
+}
+
+.footer-social-link svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* ─────────────────────────────────────────────
+   NEWSLETTER
+   ───────────────────────────────────────────── */
+.footer-newsletter {
+    margin-top: var(--space-6);
+}
+
+.footer-newsletter-text {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--space-3);
+}
+
+.newsletter-form {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--color-white);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-lg);
+    outline: none;
+    transition: all var(--transition-fast);
+}
+
+.newsletter-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.newsletter-input:focus {
+    border-color: var(--color-primary);
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.newsletter-btn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: none;
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    white-space: nowrap;
+}
+
+.newsletter-btn:hover {
+    background-color: var(--color-primary-hover);
+}
+
+/* ─────────────────────────────────────────────
+   PAYMENT METHODS
+   ───────────────────────────────────────────── */
+.footer-payments {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    margin-top: var(--space-6);
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-payments-title {
+    width: 100%;
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: var(--space-2);
+}
+
+.payment-icon {
+    height: 24px;
+    width: auto;
+    opacity: 0.7;
+    filter: brightness(0) invert(1);
+}
+
+/* ─────────────────────────────────────────────
+   FOOTER BOTTOM
+   ───────────────────────────────────────────── */
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-6) 0;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: right;
+    }
+
+    body.lang-en .footer-bottom {
+        text-align: left;
+    }
+}
+
+.footer-copyright {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-legal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .footer-legal {
+        justify-content: flex-start;
+    }
+}
+
+.footer-legal a {
+    font-size: var(--text-sm);
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-legal a:hover {
+    color: var(--color-primary);
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE APP DOWNLOAD (Optional)
+   ───────────────────────────────────────────── */
+.footer-app-links {
+    display: flex;
+    gap: var(--space-3);
+    margin-top: var(--space-4);
+}
+
+.app-store-btn {
+    display: block;
+    height: 40px;
+}
+
+.app-store-btn img {
+    height: 100%;
+    width: auto;
+}

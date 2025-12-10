@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات | لوحة التحكم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <style>
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-4);
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-xl);
+            padding: var(--space-6);
+            max-width: 600px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .modal-title {
+            font-size: var(--text-xl);
+            font-weight: var(--font-bold);
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--color-text-muted);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-4);
+        }
+
+        .product-image-preview {
+            width: 100px;
+            height: 100px;
+            border-radius: var(--radius-lg);
+            background: var(--color-bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image-preview img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: var(--space-12);
+            color: var(--color-text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="admin-layout">
+        <header class="admin-header">
+            <button class="menu-toggle" id="sidebar-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <span style="font-weight:var(--font-semibold);">المنتجات</span>
+            <div style="width:40px;"></div>
+        </header>
+
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-header"><a href="dashboard.html" class="sidebar-logo"><svg viewBox="0 0 32 32"
+                        fill="currentColor">
+                        <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                            fill="none" />
+                        <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                    </svg><span>موبايل ستور</span></a></div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-group">
+                    <ul class="sidebar-nav-list">
+                        <li><a href="dashboard.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>لوحة التحكم</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-nav-group">
+                    <p class="sidebar-nav-title">إدارة المتجر</p>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="products.html" class="sidebar-nav-link active"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                </svg>المنتجات</a></li>
+                        <li><a href="brands.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+                                </svg>الماركات</a></li>
+                        <li><a href="orders.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 6h15l-1.5 9h-12z" />
+                                </svg>الطلبات</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-nav-group">
+                    <p class="sidebar-nav-title">الإعدادات</p>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="settings.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>الإعدادات</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">م</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">محمد أحمد</div>
+                        <div class="sidebar-user-role">مدير النظام</div>
+                    </div>
+                </div>
+                <a href="#" id="logout-btn"
+                    style="display:flex;align-items:center;gap:var(--space-2);padding:var(--space-3);margin-top:var(--space-3);color:var(--color-error);font-size:var(--text-sm);border-radius:var(--radius-lg);"
+                    onmouseover="this.style.background='var(--color-error-light)'"
+                    onmouseout="this.style.background='transparent'"><svg width="18" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M9 21H5a2 2 0 01-2-2V5a2 2 0 012-2h4" />
+                        <polyline points="16,17 21,12 16,7" />
+                        <line x1="21" y1="12" x2="9" y2="12" />
+                    </svg>تسجيل الخروج</a>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">المنتجات</h1>
+                    <p class="page-subtitle">إدارة منتجات المتجر</p>
+                </div>
+                <div class="page-actions">
+                    <button class="btn btn-secondary" onclick="exportProducts()"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                        </svg>تصدير</button>
+                    <button class="btn btn-primary" onclick="openAddModal()"><svg width="18" height="18"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 5v14M5 12h14" />
+                        </svg>إضافة منتج</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid" style="margin-bottom:var(--space-6);">
+                <div class="stat-card">
+                    <div class="stat-card-value" id="stat-total">0</div>
+                    <div class="stat-card-label">إجمالي المنتجات</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value" id="stat-instock">0</div>
+                    <div class="stat-card-label">متوفر</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value" id="stat-featured">0</div>
+                    <div class="stat-card-label">مميز</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value" id="stat-brands">0</div>
+                    <div class="stat-card-label">الماركات</div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="admin-card" style="margin-bottom:var(--space-4);">
+                <div style="display:flex;gap:var(--space-4);flex-wrap:wrap;padding:var(--space-4);">
+                    <input type="text" class="form-input" id="search-input" placeholder="بحث عن منتج..."
+                        style="flex:1;min-width:200px;" oninput="filterProducts()">
+                    <select class="form-select" id="brand-filter" style="min-width:150px;" onchange="filterProducts()">
+                        <option value="">كل الماركات</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Products Table -->
+            <div class="admin-card">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="width:60px;">الصورة</th>
+                                <th>المنتج</th>
+                                <th>الماركة</th>
+                                <th>السعر</th>
+                                <th>المخزون</th>
+                                <th>مميز</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="products-table"></tbody>
+                    </table>
+                </div>
+                <div class="empty-state" id="empty-state" style="display:none;">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                        style="margin-bottom:var(--space-4);opacity:0.5;">
+                        <rect x="5" y="2" width="14" height="20" rx="2" />
+                        <path d="M12 18h.01" />
+                    </svg>
+                    <p>لا توجد منتجات بعد</p>
+                    <button class="btn btn-primary" style="margin-top:var(--space-4);" onclick="openAddModal()">إضافة
+                        أول منتج</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Add/Edit Product Modal -->
+    <div class="modal-overlay" id="product-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">إضافة منتج جديد</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="product-form" onsubmit="saveProduct(event)">
+                <input type="hidden" id="product-id">
+
+                <div class="form-group">
+                    <label class="form-label">اسم المنتج *</label>
+                    <input type="text" class="form-input" id="product-name" placeholder="مثال: آيفون 15 برو ماكس"
+                        required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">الماركة *</label>
+                        <select class="form-select" id="product-brand" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">اللون</label>
+                        <input type="text" class="form-input" id="product-color" placeholder="مثال: أسود">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">السعر (ر.س) *</label>
+                        <input type="number" class="form-input" id="product-price" placeholder="0" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">السعر القديم (للخصم)</label>
+                        <input type="number" class="form-input" id="product-old-price" placeholder="0">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">السعة التخزينية</label>
+                        <select class="form-select" id="product-storage">
+                            <option value="64GB">64GB</option>
+                            <option value="128GB">128GB</option>
+                            <option value="256GB" selected>256GB</option>
+                            <option value="512GB">512GB</option>
+                            <option value="1TB">1TB</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">الرام</label>
+                        <select class="form-select" id="product-ram">
+                            <option value="4GB">4GB</option>
+                            <option value="6GB">6GB</option>
+                            <option value="8GB" selected>8GB</option>
+                            <option value="12GB">12GB</option>
+                            <option value="16GB">16GB</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">رابط الصورة</label>
+                    <input type="url" class="form-input" id="product-image" placeholder="https://..."
+                        oninput="previewImage()">
+                    <div class="product-image-preview" id="image-preview" style="margin-top:var(--space-2);"><span
+                            style="color:var(--color-text-muted);">معاينة</span></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">الوصف</label>
+                    <textarea class="form-textarea" id="product-description" rows="2"
+                        placeholder="وصف مختصر للمنتج..."></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                            <input type="checkbox" id="product-instock" checked style="width:18px;height:18px;">
+                            <span>متوفر في المخزون</span>
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label style="display:flex;align-items:center;gap:var(--space-2);cursor:pointer;">
+                            <input type="checkbox" id="product-featured" style="width:18px;height:18px;">
+                            <span>منتج مميز</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:var(--space-3);margin-top:var(--space-6);">
+                    <button type="button" class="btn btn-secondary" onclick="closeModal()">إلغاء</button>
+                    <button type="submit" class="btn btn-primary">حفظ المنتج</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        let allProducts = [];
+        let allBrands = [];
+        let useAPI = true;
+
+        document.addEventListener('DOMContentLoaded', () => {
+            AdminAuth.initDashboard();
+            loadData();
+            document.getElementById('sidebar-toggle')?.addEventListener('click', () => {
+                document.getElementById('admin-sidebar').classList.toggle('active');
+            });
+        });
+
+        async function loadData() {
+            try {
+                // Try API first
+                allProducts = await API.getAllProducts();
+                allBrands = await API.getAllBrands();
+                const stats = await API.getStats();
+                document.getElementById('stat-total').textContent = stats.totalProducts;
+                document.getElementById('stat-instock').textContent = stats.inStock;
+                document.getElementById('stat-featured').textContent = stats.featured;
+                document.getElementById('stat-brands').textContent = stats.totalBrands;
+                useAPI = true;
+            } catch (e) {
+                console.log('API not available, using localStorage');
+                useAPI = false;
+                allProducts = ProductDB.getAllProducts();
+                allBrands = ProductDB.getAllBrands();
+                updateStats();
+            }
+            populateBrandFilters();
+            renderProducts(allProducts);
+        }
+
+        function updateStats() {
+            const stats = ProductDB.getStats();
+            document.getElementById('stat-total').textContent = stats.totalProducts;
+            document.getElementById('stat-instock').textContent = stats.inStock;
+            document.getElementById('stat-featured').textContent = stats.featured;
+            document.getElementById('stat-brands').textContent = stats.totalBrands;
+        }
+
+        function populateBrandFilters() {
+            const filterSelect = document.getElementById('brand-filter');
+            const formSelect = document.getElementById('product-brand');
+
+            filterSelect.innerHTML = '<option value="">كل الماركات</option>';
+            formSelect.innerHTML = '';
+
+            allBrands.forEach(brand => {
+                filterSelect.innerHTML += `<option value="${brand.id}">${brand.name}</option>`;
+                formSelect.innerHTML += `<option value="${brand.id}">${brand.name}</option>`;
+            });
+        }
+
+        function renderProducts(products) {
+            const tbody = document.getElementById('products-table');
+            const emptyState = document.getElementById('empty-state');
+
+            if (products.length === 0) {
+                tbody.innerHTML = '';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            emptyState.style.display = 'none';
+            tbody.innerHTML = products.map(p => {
+                const brand = allBrands.find(b => b.id === p.brandId);
+                return `
+          <tr>
+            <td><div class="product-image-preview" style="width:50px;height:50px;"><img src="${p.image || ''}" alt="${p.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><rect fill=%22%23f0f0f0%22 width=%2224%22 height=%2224%22/><text x=%2212%22 y=%2216%22 text-anchor=%22middle%22 fill=%22%23999%22>📱</text></svg>'"></div></td>
+            <td><strong>${p.name}</strong><br><small style="color:var(--color-text-muted);">${p.storage} • ${p.ram}</small></td>
+            <td>${brand ? brand.name : '-'}</td>
+            <td><strong>${p.price.toLocaleString()} ر.س</strong>${p.oldPrice ? `<br><small style="text-decoration:line-through;color:var(--color-text-muted);">${p.oldPrice.toLocaleString()} ر.س</small>` : ''}</td>
+            <td><span class="status-badge ${p.inStock ? 'active' : 'inactive'}">${p.inStock ? 'متوفر' : 'نفد'}</span></td>
+            <td>${p.featured ? '⭐' : '-'}</td>
+            <td>
+              <div class="table-actions">
+                <button class="table-action-btn" onclick="editProduct(${p.id})" title="تعديل"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
+                <button class="table-action-btn delete" onclick="deleteProduct(${p.id})" title="حذف"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>
+              </div>
+            </td>
+          </tr>
+        `;
+            }).join('');
+        }
+
+        function filterProducts() {
+            const search = document.getElementById('search-input').value.toLowerCase();
+            const brandId = document.getElementById('brand-filter').value;
+
+            let filtered = allProducts;
+            if (search) {
+                filtered = filtered.filter(p => p.name.toLowerCase().includes(search));
+            }
+            if (brandId) {
+                filtered = filtered.filter(p => p.brandId === parseInt(brandId));
+            }
+            renderProducts(filtered);
+        }
+
+        function openAddModal() {
+            document.getElementById('modal-title').textContent = 'إضافة منتج جديد';
+            document.getElementById('product-form').reset();
+            document.getElementById('product-id').value = '';
+            document.getElementById('image-preview').innerHTML = '<span style="color:var(--color-text-muted);">معاينة</span>';
+            document.getElementById('product-modal').classList.add('active');
+        }
+
+        async function editProduct(id) {
+            let product;
+            if (useAPI) {
+                product = await API.getProductById(id);
+            } else {
+                product = ProductDB.getProductById(id);
+            }
+            if (!product) return;
+
+            document.getElementById('modal-title').textContent = 'تعديل المنتج';
+            document.getElementById('product-id').value = product.id;
+            document.getElementById('product-name').value = product.name;
+            document.getElementById('product-brand').value = product.brandId;
+            document.getElementById('product-price').value = product.price;
+            document.getElementById('product-old-price').value = product.oldPrice || '';
+            document.getElementById('product-storage').value = product.storage || '256GB';
+            document.getElementById('product-ram').value = product.ram || '8GB';
+            document.getElementById('product-color').value = product.color || '';
+            document.getElementById('product-image').value = product.image || '';
+            document.getElementById('product-description').value = product.description || '';
+            document.getElementById('product-instock').checked = product.inStock;
+            document.getElementById('product-featured').checked = product.featured;
+            previewImage();
+            document.getElementById('product-modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('product-modal').classList.remove('active');
+        }
+
+        function previewImage() {
+            const url = document.getElementById('product-image').value;
+            const preview = document.getElementById('image-preview');
+            if (url) {
+                preview.innerHTML = `<img src="${url}" alt="Preview" onerror="this.parentElement.innerHTML='<span style=color:var(--color-error)>صورة غير صالحة</span>'">`;
+            } else {
+                preview.innerHTML = '<span style="color:var(--color-text-muted);">معاينة</span>';
+            }
+        }
+
+        async function saveProduct(e) {
+            e.preventDefault();
+
+            const id = document.getElementById('product-id').value;
+            const productData = {
+                name: document.getElementById('product-name').value,
+                brandId: parseInt(document.getElementById('product-brand').value),
+                price: parseInt(document.getElementById('product-price').value),
+                oldPrice: document.getElementById('product-old-price').value ? parseInt(document.getElementById('product-old-price').value) : null,
+                storage: document.getElementById('product-storage').value,
+                ram: document.getElementById('product-ram').value,
+                color: document.getElementById('product-color').value,
+                image: document.getElementById('product-image').value,
+                description: document.getElementById('product-description').value,
+                inStock: document.getElementById('product-instock').checked,
+                featured: document.getElementById('product-featured').checked
+            };
+
+            if (useAPI) {
+                if (id) {
+                    await API.updateProduct(id, productData);
+                } else {
+                    await API.addProduct(productData);
+                }
+            } else {
+                if (id) {
+                    ProductDB.updateProduct(id, productData);
+                } else {
+                    ProductDB.addProduct(productData);
+                }
+            }
+
+            closeModal();
+            loadData();
+        }
+
+        async function deleteProduct(id) {
+            if (confirm('هل أنت متأكد من حذف هذا المنتج؟')) {
+                if (useAPI) {
+                    await API.deleteProduct(id);
+                } else {
+                    ProductDB.deleteProduct(id);
+                }
+                loadData();
+            }
+        }
+
+        function exportProducts() {
+            const data = useAPI ? JSON.stringify({ products: allProducts, brands: allBrands }, null, 2) : ProductDB.exportData();
+            const blob = new Blob([data], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'store-data-' + new Date().toISOString().split('T')[0] + '.json';
+            a.click();
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+
+</html>

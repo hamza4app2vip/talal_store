@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الطلبات | لوحة التحكم</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/variables.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+    <div class="admin-layout">
+        <header class="admin-header">
+            <button class="menu-toggle" id="sidebar-toggle"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2">
+                    <path d="M3 12h18M3 6h18M3 18h18" />
+                </svg></button>
+            <span style="font-weight:var(--font-semibold);">الطلبات</span>
+            <div style="width:40px;"></div>
+        </header>
+
+        <aside class="admin-sidebar" id="admin-sidebar">
+            <div class="sidebar-header">
+                <a href="dashboard.html" class="sidebar-logo">
+                    <svg viewBox="0 0 32 32" fill="currentColor">
+                        <rect x="8" y="2" width="16" height="28" rx="3" stroke="currentColor" stroke-width="2"
+                            fill="none" />
+                        <circle cx="16" cy="26" r="1.5" fill="currentColor" />
+                    </svg>
+                    <span>موبايل ستور</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-group">
+                    <ul class="sidebar-nav-list">
+                        <li><a href="dashboard.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="7" height="7" />
+                                    <rect x="14" y="3" width="7" height="7" />
+                                    <rect x="14" y="14" width="7" height="7" />
+                                    <rect x="3" y="14" width="7" height="7" />
+                                </svg>لوحة التحكم</a></li>
+                    </ul>
+                </div>
+                <div class="sidebar-nav-group">
+                    <p class="sidebar-nav-title">إدارة المتجر</p>
+                    <ul class="sidebar-nav-list">
+                        <li><a href="products.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <rect x="5" y="2" width="14" height="20" rx="2" />
+                                </svg>المنتجات</a></li>
+                        <li><a href="brands.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path
+                                        d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z" />
+                                </svg>الماركات</a></li>
+                        <li><a href="orders.html" class="sidebar-nav-link active"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 6h15l-1.5 9h-12z" />
+                                    <circle cx="9" cy="20" r="1" />
+                                    <circle cx="18" cy="20" r="1" />
+                                </svg>الطلبات</a></li>
+                        <li><a href="customers.html" class="sidebar-nav-link"><svg viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                                    <circle cx="9" cy="7" r="4" />
+                                </svg>العملاء</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <div class="sidebar-user">
+                    <div class="sidebar-user-avatar">م</div>
+                    <div class="sidebar-user-info">
+                        <div class="sidebar-user-name">محمد أحمد</div>
+                        <div class="sidebar-user-role">مدير النظام</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="admin-main">
+            <div class="page-header">
+                <div>
+                    <h1 class="page-title">الطلبات</h1>
+                    <p class="page-subtitle">إدارة ومتابعة طلبات العملاء</p>
+                </div>
+                <div class="page-actions">
+                    <button class="btn btn-secondary"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M17 8l-5-5-5 5M12 3v12" />
+                        </svg>تصدير</button>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid" style="margin-bottom:var(--space-6);">
+                <div class="stat-card">
+                    <div class="stat-card-value">47</div>
+                    <div class="stat-card-label">طلبات جديدة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value">23</div>
+                    <div class="stat-card-label">قيد المعالجة</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value">18</div>
+                    <div class="stat-card-label">قيد التوصيل</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-card-value">892</div>
+                    <div class="stat-card-label">مكتملة</div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="admin-card" style="margin-bottom:var(--space-6);">
+                <div class="admin-card-body"
+                    style="display:flex;gap:var(--space-4);flex-wrap:wrap;align-items:flex-end;">
+                    <div class="form-group" style="margin:0;flex:1;min-width:200px;">
+                        <label class="form-label">بحث</label>
+                        <input type="text" class="form-input" placeholder="رقم الطلب، اسم العميل...">
+                    </div>
+                    <div class="form-group" style="margin:0;min-width:150px;">
+                        <label class="form-label">الحالة</label>
+                        <select class="form-select">
+                            <option value="">الكل</option>
+                            <option>جديد</option>
+                            <option>قيد المعالجة</option>
+                            <option>قيد التوصيل</option>
+                            <option>مكتمل</option>
+                            <option>ملغي</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="margin:0;min-width:150px;">
+                        <label class="form-label">التاريخ</label>
+                        <select class="form-select">
+                            <option>اليوم</option>
+                            <option>آخر 7 أيام</option>
+                            <option>هذا الشهر</option>
+                            <option>الكل</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary">بحث</button>
+                </div>
+            </div>
+
+            <!-- Orders Table -->
+            <div class="admin-card">
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>رقم الطلب</th>
+                                <th>العميل</th>
+                                <th>المنتجات</th>
+                                <th>المبلغ</th>
+                                <th>طريقة الدفع</th>
+                                <th>الحالة</th>
+                                <th>التاريخ</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>#12547</strong></td>
+                                <td>أحمد محمد<br><span
+                                        style="font-size:var(--text-xs);color:var(--color-text-muted);">0501234567</span>
+                                </td>
+                                <td>آيفون 15 برو ماكس (1)</td>
+                                <td>5,499 ر.س</td>
+                                <td>بطاقة ائتمان</td>
+                                <td><span class="status-badge active">مكتمل</span></td>
+                                <td>10 يناير 2024</td>
+                                <td><button class="table-action-btn"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>#12546</strong></td>
+                                <td>سارة عبدالله<br><span
+                                        style="font-size:var(--text-xs);color:var(--color-text-muted);">0559876543</span>
+                                </td>
+                                <td>سامسونج A54 (1)</td>
+                                <td>1,899 ر.س</td>
+                                <td>تحويل بنكي</td>
+                                <td><span class="status-badge pending">قيد التوصيل</span></td>
+                                <td>10 يناير 2024</td>
+                                <td><button class="table-action-btn"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>#12545</strong></td>
+                                <td>خالد العتيبي<br><span
+                                        style="font-size:var(--text-xs);color:var(--color-text-muted);">0541112222</span>
+                                </td>
+                                <td>شاومي 14 ألترا (1)</td>
+                                <td>4,299 ر.س</td>
+                                <td>الدفع عند الاستلام</td>
+                                <td><span class="status-badge"
+                                        style="background:var(--color-info-light);color:var(--color-info);">قيد
+                                        المعالجة</span></td>
+                                <td>9 يناير 2024</td>
+                                <td><button class="table-action-btn"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>#12544</strong></td>
+                                <td>فاطمة الزهراني<br><span
+                                        style="font-size:var(--text-xs);color:var(--color-text-muted);">0533334444</span>
+                                </td>
+                                <td>آيفون 15 (2)</td>
+                                <td>7,398 ر.س</td>
+                                <td>تقسيط</td>
+                                <td><span class="status-badge active">مكتمل</span></td>
+                                <td>9 يناير 2024</td>
+                                <td><button class="table-action-btn"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg></button></td>
+                            </tr>
+                            <tr>
+                                <td><strong>#12543</strong></td>
+                                <td>محمد الغامدي<br><span
+                                        style="font-size:var(--text-xs);color:var(--color-text-muted);">0577778888</span>
+                                </td>
+                                <td>ريلمي GT 5 Pro (1)</td>
+                                <td>2,299 ر.س</td>
+                                <td>بطاقة ائتمان</td>
+                                <td><span class="status-badge inactive">ملغي</span></td>
+                                <td>8 يناير 2024</td>
+                                <td><button class="table-action-btn"><svg width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                            <circle cx="12" cy="12" r="3" />
+                                        </svg></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div
+                    style="padding:var(--space-4);display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--color-border-light);">
+                    <span style="font-size:var(--text-sm);color:var(--color-text-secondary);">عرض 1-5 من 980 طلب</span>
+                    <div style="display:flex;gap:var(--space-2);">
+                        <button class="btn btn-secondary btn-sm" disabled>السابق</button>
+                        <button class="btn btn-secondary btn-sm">التالي</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('sidebar-toggle')?.addEventListener('click', () => {
+            document.getElementById('admin-sidebar').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

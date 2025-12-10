@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="تفاصيل المنتج - موبايل ستور">
+    <title>تفاصيل المنتج | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-inner">
+            <a href="javascript:history.back()" class="header-action-btn" aria-label="رجوع">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg>
+            </a>
+            <span class="header-center">تفاصيل المنتج</span>
+            <div class="header-actions">
+                <button class="header-action-btn" aria-label="مشاركة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="18" cy="5" r="3" />
+                        <circle cx="6" cy="12" r="3" />
+                        <circle cx="18" cy="19" r="3" />
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                    </svg>
+                </button>
+                <a href="cart.html" class="header-action-btn header-cart-btn" aria-label="السلة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 6h15l-1.5 9h-12z" />
+                        <circle cx="9" cy="20" r="1" />
+                        <circle cx="18" cy="20" r="1" />
+                        <path d="M6 6L4 2H2" />
+                    </svg>
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container product-page">
+            <div class="product-page-layout">
+                <!-- Product Gallery -->
+                <div class="product-gallery">
+                    <div class="product-main-image">
+                        <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_EMEA?wid=600"
+                            alt="iPhone 15 Pro Max" id="main-product-image">
+                    </div>
+                    <div class="product-thumbnails">
+                        <button class="product-thumb active"
+                            data-src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_EMEA?wid=600">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-finish-select-202309-6-7inch_GEO_EMEA?wid=100"
+                                alt="صورة 1">
+                        </button>
+                        <button class="product-thumb"
+                            data-src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-1-202309_GEO_EMEA?wid=600">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-1-202309_GEO_EMEA?wid=100"
+                                alt="صورة 2">
+                        </button>
+                        <button class="product-thumb"
+                            data-src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309_GEO_EMEA?wid=600">
+                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/iphone-15-pro-model-unselect-gallery-2-202309_GEO_EMEA?wid=100"
+                                alt="صورة 3">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Info -->
+                <div class="product-info">
+                    <div class="product-brand-row">
+                        <div class="product-brand-logo">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                        </div>
+                        <span class="product-brand-name">Apple</span>
+                    </div>
+
+                    <h1 class="product-title">آيفون 15 برو ماكس</h1>
+                    <p class="text-en text-muted mb-4" style="font-size:var(--text-sm);">iPhone 15 Pro Max</p>
+
+                    <div class="product-rating-row">
+                        <div class="rating-stars">
+                            <span class="rating-star filled">★</span>
+                            <span class="rating-star filled">★</span>
+                            <span class="rating-star filled">★</span>
+                            <span class="rating-star filled">★</span>
+                            <span class="rating-star filled">★</span>
+                        </div>
+                        <span class="rating-value">4.9</span>
+                        <span class="text-muted">(234 تقييم)</span>
+                    </div>
+
+                    <div class="product-price">
+                        <span class="current">5,499 ر.س</span>
+                        <span class="old">5,999 ر.س</span>
+                    </div>
+
+                    <div class="product-stock in-stock">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span>متوفر في المخزون</span>
+                    </div>
+
+                    <!-- Color Options -->
+                    <div class="product-colors">
+                        <p class="product-colors-title">اللون: <strong>أسود تيتانيوم</strong></p>
+                        <div class="color-options">
+                            <button class="color-option active" data-color="black" style="background-color:#1C1C1E;"
+                                aria-label="أسود"></button>
+                            <button class="color-option" data-color="white" style="background-color:#F5F5F7;"
+                                aria-label="أبيض"></button>
+                            <button class="color-option" data-color="blue" style="background-color:#4A4A4C;"
+                                aria-label="أزرق"></button>
+                            <button class="color-option" data-color="natural" style="background-color:#E3D0BF;"
+                                aria-label="طبيعي"></button>
+                        </div>
+                    </div>
+
+                    <!-- Storage Options -->
+                    <div class="product-colors mb-6">
+                        <p class="product-colors-title">السعة التخزينية</p>
+                        <div class="filter-options pills-group">
+                            <button class="pill active" data-value="256GB">256GB</button>
+                            <button class="pill" data-value="512GB">512GB</button>
+                            <button class="pill" data-value="1TB">1TB</button>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="product-actions">
+                        <button class="btn btn-primary btn-lg flex-1" onclick="addToCart(1)">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M6 6h15l-1.5 9h-12z" />
+                                <circle cx="9" cy="20" r="1" />
+                                <circle cx="18" cy="20" r="1" />
+                            </svg>
+                            إضافة للسلة
+                        </button>
+                        <button class="btn btn-secondary btn-lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Specs Summary -->
+                    <div class="product-specs">
+                        <h3 style="font-size:var(--text-lg);margin-bottom:var(--space-4);">المواصفات الرئيسية</h3>
+                        <div class="specs-grid">
+                            <div class="spec-item"><span class="spec-label">المعالج</span><span class="spec-value">A17
+                                    Pro</span></div>
+                            <div class="spec-item"><span class="spec-label">الذاكرة</span><span class="spec-value">8GB
+                                    RAM</span></div>
+                            <div class="spec-item"><span class="spec-label">التخزين</span><span
+                                    class="spec-value">256GB</span></div>
+                            <div class="spec-item"><span class="spec-label">الكاميرا</span><span
+                                    class="spec-value">48MP</span></div>
+                            <div class="spec-item"><span class="spec-label">البطارية</span><span
+                                    class="spec-value">4422mAh</span></div>
+                            <div class="spec-item"><span class="spec-label">الشاشة</span><span class="spec-value">6.7"
+                                    Super Retina XDR</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="product-tabs tabs">
+                <div class="tabs-nav">
+                    <button class="tab-btn active" data-tab="tab-specs">المواصفات الكاملة</button>
+                    <button class="tab-btn" data-tab="tab-reviews">التقييمات</button>
+                    <button class="tab-btn" data-tab="tab-faq">الأسئلة الشائعة</button>
+                </div>
+                <div class="tab-content active" id="tab-specs">
+                    <div class="specs-grid">
+                        <div class="spec-item"><span class="spec-label">نظام التشغيل</span><span class="spec-value">iOS
+                                17</span></div>
+                        <div class="spec-item"><span class="spec-label">المعالج</span><span class="spec-value">Apple A17
+                                Pro (3nm)</span></div>
+                        <div class="spec-item"><span class="spec-label">الذاكرة</span><span class="spec-value">8GB
+                                RAM</span></div>
+                        <div class="spec-item"><span class="spec-label">التخزين</span><span class="spec-value">256GB /
+                                512GB / 1TB</span></div>
+                        <div class="spec-item"><span class="spec-label">الشاشة</span><span class="spec-value">6.7" LTPO
+                                Super Retina XDR OLED</span></div>
+                        <div class="spec-item"><span class="spec-label">دقة الشاشة</span><span class="spec-value">2796 x
+                                1290 pixels</span></div>
+                        <div class="spec-item"><span class="spec-label">معدل التحديث</span><span
+                                class="spec-value">1-120Hz ProMotion</span></div>
+                        <div class="spec-item"><span class="spec-label">الكاميرا الخلفية</span><span
+                                class="spec-value">48MP + 12MP + 12MP</span></div>
+                        <div class="spec-item"><span class="spec-label">الكاميرا الأمامية</span><span
+                                class="spec-value">12MP TrueDepth</span></div>
+                        <div class="spec-item"><span class="spec-label">البطارية</span><span
+                                class="spec-value">4422mAh</span></div>
+                        <div class="spec-item"><span class="spec-label">الشحن</span><span class="spec-value">USB-C,
+                                MagSafe</span></div>
+                        <div class="spec-item"><span class="spec-label">مقاومة الماء</span><span
+                                class="spec-value">IP68</span></div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-reviews">
+                    <div class="reviews-grid" style="margin-top:var(--space-4);">
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">أ</div>
+                                <div class="review-author">
+                                    <div class="review-name">أحمد محمد</div>
+                                    <div class="review-verified"><svg width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>مشتري موثّق</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">جهاز ممتاز والكاميرا خرافية. التوصيل كان سريع جداً والتغليف احترافي.
+                            </p>
+                        </div>
+                        <div class="review-card">
+                            <div class="review-header">
+                                <div class="review-avatar">س</div>
+                                <div class="review-author">
+                                    <div class="review-name">سارة عبدالله</div>
+                                    <div class="review-verified"><svg width="14" height="14" viewBox="0 0 24 24"
+                                            fill="currentColor">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                        </svg>مشتري موثّق</div>
+                                </div>
+                            </div>
+                            <div class="review-rating">★★★★★</div>
+                            <p class="review-text">أفضل هاتف استخدمته. البطارية تطول معي طول اليوم.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content" id="tab-faq">
+                    <div style="padding:var(--space-4) 0;">
+                        <details
+                            style="margin-bottom:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);padding:var(--space-4);">
+                            <summary style="cursor:pointer;font-weight:var(--font-semibold);">هل الجهاز يأتي بضمان؟
+                            </summary>
+                            <p style="margin-top:var(--space-2);color:var(--color-text-secondary);">نعم، جميع الأجهزة
+                                تأتي بضمان رسمي لمدة سنة كاملة من أبل.</p>
+                        </details>
+                        <details
+                            style="margin-bottom:var(--space-3);border:1px solid var(--color-border-light);border-radius:var(--radius-lg);padding:var(--space-4);">
+                            <summary style="cursor:pointer;font-weight:var(--font-semibold);">ما هي خيارات الدفع
+                                المتاحة؟</summary>
+                            <p style="margin-top:var(--space-2);color:var(--color-text-secondary);">نوفر الدفع النقدي،
+                                البطاقات الائتمانية، مدى، والتقسيط مع البنوك المشاركة.</p>
+                        </details>
+                        <details
+                            style="border:1px solid var(--color-border-light);border-radius:var(--radius-lg);padding:var(--space-4);">
+                            <summary style="cursor:pointer;font-weight:var(--font-semibold);">كم مدة التوصيل؟</summary>
+                            <p style="margin-top:var(--space-2);color:var(--color-text-secondary);">التوصيل خلال 1-3
+                                أيام عمل لجميع مناطق المملكة.</p>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/components.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

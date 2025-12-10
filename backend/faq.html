@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأسئلة الشائعة | موبايل ستور</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .faq-page {
+            padding: var(--space-8) 0;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--color-bg-primary);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-3);
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+        }
+
+        .faq-item summary {
+            padding: var(--space-4) var(--space-5);
+            font-weight: var(--font-semibold);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+        }
+
+        .faq-item summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-item[open] summary {
+            border-bottom: 1px solid var(--color-border-light);
+        }
+
+        .faq-answer {
+            padding: var(--space-4) var(--space-5);
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-category {
+            font-size: var(--text-lg);
+            font-weight: var(--font-bold);
+            margin: var(--space-6) 0 var(--space-4);
+            color: var(--color-primary);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-inner">
+            <a href="support.html" class="header-action-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2">
+                    <path d="M15 18l-6-6 6-6" />
+                </svg></a>
+            <span class="header-center">الأسئلة الشائعة</span>
+            <div style="width:40px;"></div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container faq-page">
+            <h2 class="faq-category">الشراء والدفع</h2>
+            <details class="faq-item">
+                <summary>ما هي طرق الدفع المتاحة؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">نوفر عدة طرق للدفع: بطاقات الائتمان (Visa, Mastercard)، مدى، التحويل البنكي،
+                    الدفع عند الاستلام، والتقسيط عبر تمارا وتابي.</div>
+            </details>
+            <details class="faq-item">
+                <summary>هل يمكنني الدفع بالتقسيط؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">نعم، نوفر خيار التقسيط بدون فوائد عبر تمارا وتابي لمدة تصل إلى 4 أشهر، وكذلك
+                    التقسيط عبر البنوك لمدة تصل إلى 12 شهر.</div>
+            </details>
+            <details class="faq-item">
+                <summary>هل الأسعار شاملة الضريبة؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">نعم، جميع الأسعار المعروضة شاملة ضريبة القيمة المضافة 15%.</div>
+            </details>
+
+            <h2 class="faq-category">الشحن والتوصيل</h2>
+            <details class="faq-item">
+                <summary>كم مدة التوصيل؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">التوصيل خلال 1-3 أيام عمل للمدن الرئيسية (الرياض، جدة، الدمام)، و3-5 أيام لباقي
+                    المناطق.</div>
+            </details>
+            <details class="faq-item">
+                <summary>هل الشحن مجاني؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">الشحن مجاني للطلبات التي تزيد عن 500 ريال. للطلبات الأقل، رسوم الشحن 30 ريال.
+                </div>
+            </details>
+
+            <h2 class="faq-category">الضمان والإرجاع</h2>
+            <details class="faq-item">
+                <summary>ما هي مدة الضمان؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">جميع الأجهزة تأتي بضمان رسمي من الشركة المصنعة لمدة سنة كاملة، بالإضافة لضمان
+                    ممتد من موبايل ستور.</div>
+            </details>
+            <details class="faq-item">
+                <summary>هل يمكنني إرجاع المنتج؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">نعم، يمكنك إرجاع المنتج خلال 7 أيام من الاستلام بشرط أن يكون بحالته الأصلية مع
+                    جميع الملحقات والعبوة.</div>
+            </details>
+            <details class="faq-item">
+                <summary>كيف أستفيد من الضمان؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">تواصل معنا عبر صفحة الصيانة أو اتصل على الرقم الموحد 920012345 وسنقوم بتوجيهك
+                    للخطوات المناسبة.</div>
+            </details>
+
+            <h2 class="faq-category">الاستبدال</h2>
+            <details class="faq-item">
+                <summary>كيف يعمل برنامج الاستبدال؟<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M6 9l6 6 6-6" />
+                    </svg></summary>
+                <div class="faq-answer">قم بتقييم جهازك عبر صفحة الاستبدال، ستحصل على عرض سعر فوري. يمكنك تسليم جهازك في
+                    أي فرع والحصول على خصم مباشر على جهازك الجديد.</div>
+            </details>
+
+            <div
+                style="text-align:center;margin-top:var(--space-8);padding:var(--space-6);background:var(--color-bg-secondary);border-radius:var(--radius-xl);">
+                <p style="margin-bottom:var(--space-4);">لم تجد إجابة لسؤالك؟</p>
+                <a href="contact.html" class="btn btn-primary">تواصل معنا</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2024 موبايل ستور. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

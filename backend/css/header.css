@@ -1,0 +1,456 @@
+/* =============================================
+   HEADER & NAVIGATION - Arabic Smartphone Store
+   ============================================= */
+
+/* ─────────────────────────────────────────────
+   MAIN HEADER
+   ───────────────────────────────────────────── */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+    background-color: var(--color-bg-primary);
+    border-bottom: 1px solid var(--color-border-light);
+    z-index: var(--z-sticky);
+    transition: all var(--transition-base);
+}
+
+.header.header-scrolled {
+    box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 var(--space-4);
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+/* ─────────────────────────────────────────────
+   LOGO
+   ───────────────────────────────────────────── */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+}
+
+.header-logo-img {
+    height: 32px;
+    width: auto;
+}
+
+.header-logo-text {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .header-logo-text {
+        display: block;
+    }
+}
+
+/* ─────────────────────────────────────────────
+   HEADER CENTER (Page Title)
+   ───────────────────────────────────────────── */
+.header-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-primary);
+}
+
+/* ─────────────────────────────────────────────
+   HEADER ACTIONS (Icons)
+   ───────────────────────────────────────────── */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.header-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-primary);
+    background-color: transparent;
+    transition: all var(--transition-fast);
+}
+
+.header-action-btn:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.header-action-btn svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* Cart Badge */
+.header-cart-btn {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-size: 11px;
+    font-weight: var(--font-bold);
+    border-radius: var(--radius-full);
+}
+
+body.lang-en .cart-badge {
+    left: auto;
+    right: 4px;
+}
+
+/* ─────────────────────────────────────────────
+   HAMBURGER MENU BUTTON
+   ───────────────────────────────────────────── */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-primary);
+    background-color: transparent;
+    transition: all var(--transition-fast);
+}
+
+.menu-toggle:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.menu-toggle svg {
+    width: 24px;
+    height: 24px;
+}
+
+@media (min-width: 1024px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* ─────────────────────────────────────────────
+   DESKTOP NAVIGATION
+   ───────────────────────────────────────────── */
+.desktop-nav {
+    display: none;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+@media (min-width: 1024px) {
+    .desktop-nav {
+        display: flex;
+    }
+}
+
+.desktop-nav-link {
+    padding: var(--space-2) var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-text-secondary);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.desktop-nav-link:hover,
+.desktop-nav-link.active {
+    color: var(--color-primary);
+    background-color: var(--color-primary-lighter);
+}
+
+/* ─────────────────────────────────────────────
+   MOBILE NAVIGATION DRAWER
+   ───────────────────────────────────────────── */
+.nav-drawer-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-bg-overlay);
+    opacity: 0;
+    visibility: hidden;
+    z-index: var(--z-modal-backdrop);
+    transition: all var(--transition-base);
+}
+
+.nav-drawer-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-drawer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--color-bg-primary);
+    z-index: var(--z-modal);
+    transform: translateX(100%);
+    transition: transform var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+body.lang-en .nav-drawer {
+    right: auto;
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.nav-drawer.active {
+    transform: translateX(0);
+}
+
+/* Drawer Header */
+.nav-drawer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.nav-drawer-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.nav-drawer-logo img {
+    height: 28px;
+}
+
+.nav-drawer-logo span {
+    font-size: var(--text-lg);
+    font-weight: var(--font-bold);
+    color: var(--color-text-primary);
+}
+
+.nav-drawer-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    transition: all var(--transition-fast);
+}
+
+.nav-drawer-close:hover {
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-primary);
+}
+
+.nav-drawer-close svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Drawer Content */
+.nav-drawer-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: var(--space-4);
+}
+
+/* Nav Links */
+.nav-drawer-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.nav-drawer-link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+}
+
+.nav-drawer-link:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.nav-drawer-link.active {
+    background-color: var(--color-primary-light);
+    color: var(--color-primary);
+}
+
+.nav-drawer-link svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-text-muted);
+}
+
+.nav-drawer-link.active svg {
+    color: var(--color-primary);
+}
+
+/* Drawer Divider */
+.nav-drawer-divider {
+    height: 1px;
+    background-color: var(--color-border-light);
+    margin: var(--space-4) 0;
+}
+
+/* Drawer Footer */
+.nav-drawer-footer {
+    padding: var(--space-4);
+    border-top: 1px solid var(--color-border-light);
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-3);
+    background-color: var(--color-bg-secondary);
+    border-radius: var(--radius-lg);
+}
+
+.lang-toggle-btn {
+    flex: 1;
+    padding: var(--space-2);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-text-secondary);
+    background-color: transparent;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.lang-toggle-btn.active {
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* ─────────────────────────────────────────────
+   DESKTOP HEADER ENHANCEMENTS
+   ───────────────────────────────────────────── */
+@media (min-width: 1024px) {
+    .header {
+        height: var(--header-height-desktop);
+    }
+
+    .header-inner {
+        padding: 0 var(--space-8);
+    }
+
+    .header-logo-img {
+        height: 40px;
+    }
+
+    .header-center {
+        display: none;
+    }
+
+    .header-action-btn {
+        width: 44px;
+        height: 44px;
+    }
+}
+
+/* ─────────────────────────────────────────────
+   SEARCH OVERLAY (Mobile)
+   ───────────────────────────────────────────── */
+.search-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-bg-primary);
+    z-index: var(--z-modal);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.search-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.search-overlay-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.search-overlay-input {
+    flex: 1;
+    padding: var(--space-3);
+    font-size: var(--text-base);
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.search-overlay-close {
+    padding: var(--space-2);
+    color: var(--color-text-secondary);
+}
+
+.search-overlay-content {
+    padding: var(--space-4);
+}
+
+.search-suggestions-title {
+    font-size: var(--text-sm);
+    font-weight: var(--font-semibold);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+}
+
+.search-suggestion-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    color: var(--color-text-primary);
+    border-radius: var(--radius-lg);
+    transition: background-color var(--transition-fast);
+}
+
+.search-suggestion-item:hover {
+    background-color: var(--color-bg-secondary);
+}
